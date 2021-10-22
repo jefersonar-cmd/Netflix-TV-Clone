@@ -1,0 +1,18 @@
+@media screen and (max-width: 700px){
+    #home::before{
+        margin-left: -16px;
+    }
+
+    .container .menu-tv {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    .menu-tv::before{
+        margin-right: -57.5px;
+    }
+
+    .descricao p {
+        width: 100%;
+    }
+}

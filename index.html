@@ -8,16 +8,20 @@
 
     <!--Css Principal-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!--Material Icons-->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <!--Owl CSS-->
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
 </head>
 <body>
     <div class="container">
         <nav class="menu-tv">
             <a href="#" class="material-icons" id="search">search</a>
-            <a href="#" class="material-icons selected" id="home">home</a>
+            <a href="#" class="material-icons home" id="home">home</a>
             <a href="#" class="material-icons" id="movie">movie</a>
             <a href="#" class="material-icons" id="tv">tv</a>
             <a href="#" class="material-icons" id="add">add</a>
@@ -26,26 +30,43 @@
         <div class="conteudo">
             <div class="destaque">
                 <titulo class="titulo">
-                    <p><b>NETFLIX</b> ORIGINAL</p>
-                    <h3>Lucifer/h3>
+                    <p><img src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-5-1.png" alt=""> ORIGINAL</p>
+                    <h3>Lucifer</h3>
                 </titulo>
     
                 <div class="botoes">
-                    <button>Play</button>
-                    <button>Informações</button>
+                    <button role="button" class="selected">
+                        <i class="fas fa-play"></i>
+                        PLAY
+                    </button>
+                    <button role="button">
+                        <i class="fas fa-info-circle"></i>
+                        INFORMAÇÕES
+                    </button>
                 </div>
     
                 <div class="descricao">
-                    <h4>Veja a 2ª Temporada</h4>
-                    <p>Texto descritivo</p>
+                    <h4>Veja a 6ª Temporada</h4>
+                    <p>Entediado com a vida nas trevas, o diabo se muda para Los Angeles, abre um piano-bar e empresta sua sabedoria a uma investigadora de assassinatos.</p>
                 </div>
             </div>
     
             <div class="user-list">
                 <h3>Minha Lista</h3>
-    
+                <div class="filmes">
+                    <div class="owl-carousel owl-themes">
+                        <div class="item">
+                            <img src="https://www.themoviedb.org/t/p/w250_and_h141_face/wY8JJgXwCbof1cK3eccZW4cM7L4.jpg" alt="" class="box-film">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/jquery.min.js"></script>
 </body>
 </html>
