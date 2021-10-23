@@ -57,7 +57,16 @@
             <div class="user-list">
                 <h3>Minha Lista</h3>
                 <div class="filmes">
-                    <div class="owl-carousel owl-themes">
+                    <div class="owl-carousel">
+                        <div class="item">
+                            <img src="https://www.themoviedb.org/t/p/w250_and_h141_face/wY8JJgXwCbof1cK3eccZW4cM7L4.jpg" alt="" class="box-film">
+                        </div>
+                        <div class="item">
+                            <img src="https://www.themoviedb.org/t/p/w250_and_h141_face/wY8JJgXwCbof1cK3eccZW4cM7L4.jpg" alt="" class="box-film">
+                        </div>
+                        <div class="item">
+                            <img src="https://www.themoviedb.org/t/p/w250_and_h141_face/wY8JJgXwCbof1cK3eccZW4cM7L4.jpg" alt="" class="box-film">
+                        </div>
                         <div class="item">
                             <img src="https://www.themoviedb.org/t/p/w250_and_h141_face/wY8JJgXwCbof1cK3eccZW4cM7L4.jpg" alt="" class="box-film">
                         </div>
@@ -67,37 +76,68 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-play" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
+    <div class="modal fade" id="modal-play" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title h4" id="exampleModalFullscreenLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body trailer">
                 <video src="img/lucifer-trailer.mp4" id="trailer"></video>
                 <div class="control-video">
-                    <i class="material-icons btn" id="play" onclick="myFunction()">play_arrow</i>
-                    <i class="material-icons btn" id="close" data-bs-dismiss="modal" aria-label="Close">close</i>
+                    <i class="material-icons btn" id="play-video" onclick="myFunction()">play_arrow</i>
+                    <i class="material-icons btn" data-bs-dismiss="modal" aria-label="Close" id="close-video" onclick="closeVideo()">close</i>
                 </div>
             </div>
+          </div>
         </div>
     </div>
 
     <script>
-        var video = document.getElementById('trailer');
-        var btn = document.getElementById('play');
+    var video = document.getElementById('trailer');
+    var btn = document.getElementById('play-video');
+    var close = document.getElementById('close-video');
 
-        function myFunction(){
-            if(video.paused){
-                video.play();
-                btn.innerHTML = "pause";
-            } else {
-                video.pause();
-                btn.innerHTML = "play_arrow";
+    function myFunction(){
+        if(video.paused){
+            video.play();
+            btn.innerHTML = "pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "play_arrow";
+        }
+    }
+
+    function closeVideo(){
+        if(video.paused){
+            video.pause();
+        } else {
+            video.pause();
+        }
+    }
+
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
             }
         }
+    })
     </script>
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/owl/jquery.min.js"></script>
-    <script src="js/main.js"></script>
 
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
