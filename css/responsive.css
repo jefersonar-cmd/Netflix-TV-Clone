@@ -21,5 +21,7 @@
     video {
       transform: rotate(-90deg);
       transform-origin: left top;
+      min-width: 100%;
+      min-height: 100%;
     }
   }
