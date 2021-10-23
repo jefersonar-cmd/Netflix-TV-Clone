@@ -5,7 +5,7 @@
     /*box-sizing: border-box;*/
 }
 
-.container{
+.flex-container{
     display: flex;
     height: 100vh;
     width: 100%;
@@ -13,7 +13,7 @@
     background-size: cover;
 }
 
-.container .menu-tv {
+.flex-container .menu-tv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,4 +149,20 @@
 .box-film{
     height: 100%;
     width: 100%;
+}
+
+.trailer{
+    background-color: black;
+    justify-content: center;
+    display: flex;
+}
+
+.trailer video{
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
 }
