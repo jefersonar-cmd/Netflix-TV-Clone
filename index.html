@@ -67,22 +67,32 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-play" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
+    <div class="modal fade" id="modal-play" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title h4" id="exampleModalFullscreenLabel"></h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body trailer">
-                <video src="img/lucifer-trailer.mp4" autoplay='true' loop='true' controls='true'></video>
-                <div class="content">
-                    <button>play</button>
+            <div class="modal-content">
+                <video src="img/lucifer-trailer.mp4" id="trailer"></video>
+                <div class="control-video">
+                    <i class="material-icons btn" id="play" onclick="myFunction()">play_arrow</i>
+                    <i class="material-icons btn" id="close" data-bs-dismiss="modal" aria-label="Close">close</i>
                 </div>
             </div>
-          </div>
         </div>
     </div>
+
+    <script>
+        var video = document.getElementById('trailer');
+        var btn = document.getElementById('play');
+
+        function myFunction(){
+            if(video.paused){
+                video.play();
+                btn.innerHTML = "pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "play_arrow";
+            }
+        }
+    </script>
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
